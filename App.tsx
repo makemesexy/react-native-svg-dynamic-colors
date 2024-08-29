@@ -7,7 +7,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import BallIcon from './src/ball.svg';
-import AvatarIcon from './src/avatar.svg';
+import AvatarIcon from './src/girl.svg';
 import MessageIcon from './src/heart.svg';
 
 const { width } = Dimensions.get('window');
