@@ -1,101 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg style="height:200px;width:200px" version="1.1" viewBox="0 0 264 280" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<desc>Created with getavataaars.com</desc>
-<defs>
-<path id="b" d="m124 144.61v18.389h4c39.765 0 72 32.235 72 72v9h-200v-9c-4.8697e-15 -39.765 32.235-72 72-72h4v-18.389c-17.237-8.1886-29.628-24.924-31.695-44.73-5.8248-0.82345-10.305-5.8291-10.305-11.881v-14c0-5.946 4.3246-10.882 10-11.834v-6.1659c0-30.928 25.072-56 56-56s56 25.072 56 56v6.1659c5.6754 0.95216 10 5.8881 10 11.834v14c0 6.0521-4.4803 11.058-10.305 11.881-2.0671 19.806-14.457 36.541-31.695 44.73z"/>
-</defs>
-<g id="l" fill="none" fill-rule="evenodd">
-<g transform="translate(-825 -1100)">
-<g transform="translate(825 1100)">
-<g fill-rule="evenodd" mask="url(#react-mask-5)">
-<g transform="translate(32 36)">
-<mask id="e" fill="white">
-<use xlink:href="#b"/>
-</mask>
-<use fill="#D0C6AC" xlink:href="#b"/>
-<g id="n" fill="#FD9841" mask="url(#e)">
-<g id="m" transform="translate(0)">
-<rect width="264" height="280"/>
-</g>
-</g>
-<path d="m156 79v23c0 30.928-25.072 56-56 56s-56-25.072-56-56v-23 15c0 30.928 25.072 56 56 56s56-25.072 56-56v-15z" fill="#000" fill-opacity=".1" mask="url(#e)"/>
-</g>
-<g transform="translate(0 170)">
-<defs>
-<path id="d" d="m165.96 29.295c36.976 3.0301 66.04 33.999 66.04 71.757v8.9483h-200v-8.9483c0-38.099 29.592-69.287 67.045-71.832-0.030146 0.37359-0.045406 0.7497-0.045406 1.1281 0 11.863 14.998 21.48 33.5 21.48s33.5-9.6169 33.5-21.48c0-0.35296-0.013277-0.70392-0.039528-1.0527z"/>
-</defs>
-<mask id="g" fill="white">
-<use xlink:href="#d"/>
-</mask>
-<use fill="#E6E6E6" fill-rule="evenodd" xlink:href="#d"/>
-<g fill="#B1E2FF" fill-rule="evenodd" mask="url(#g)">
-<rect width="264" height="110"/>
-</g>
-<g fill="#000" fill-opacity=".16" fill-rule="evenodd" mask="url(#g)" opacity=".6">
-<g transform="translate(92 4)">
-<ellipse cx="40.5" cy="27.848" rx="39.635" ry="26.914"/>
-</g>
-</g>
-</g>
-<g transform="translate(76 82)" fill="#000">
-<g transform="translate(2 52)">
-<defs>
-<path id="c" d="m35.118 15.128c1.0579 9.4917 9.1081 16.872 18.882 16.872 9.8042 0 17.874-7.4259 18.892-16.96 0.081909-0.76731-0.77502-2.0401-1.849-2.0401h-33.956c-1.0802 0-2.0748 1.1784-1.969 2.1281z"/>
-</defs>
-<mask id="f" fill="white">
-<use xlink:href="#c"/>
-</mask>
-<use fill="#000000" fill-opacity=".7" fill-rule="evenodd" xlink:href="#c"/>
-<rect x="39" y="2" width="31" height="16" rx="5" fill="#fff" fill-rule="evenodd" mask="url(#f)"/>
-<g fill="#FF4F6D" fill-rule="evenodd" mask="url(#f)">
-<g transform="translate(38 24)">
-<circle cx="11" cy="11" r="11"/>
-<circle cx="21" cy="11" r="11"/>
-</g>
-</g>
-</g>
-<g transform="translate(28 40)" fill-opacity=".16">
-<path d="m16 8c0 4.4183 5.3726 8 12 8s12-3.5817 12-8"/>
-</g>
-<g transform="translate(0 8)">
-<circle cx="30" cy="22" r="14" fill="#fff"/>
-<circle cx="82" cy="22" r="14" fill="#fff"/>
-<circle id="o" cx="30" cy="22" r="6" fill="#000" fill-opacity=".7"/>
-<circle cx="82" cy="22" r="6" fill="#000" fill-opacity=".7"/>
-</g>
-<g fill-opacity=".6">
-<g transform="translate(12 6)" fill-rule="nonzero">
-<path id="k" d="m3.6302 11.159c3.9149-5.5087 14.648-8.5977 23.893-6.3274 1.0727 0.26343 2.1558-0.39262 2.4193-1.4653 0.26342-1.0727-0.39262-2.1558-1.4653-2.4193-10.737-2.6366-23.165 0.9404-28.107 7.8948-0.63986 0.90036-0.42869 2.149 0.47167 2.7888 0.90036 0.63986 2.149 0.42869 2.7888-0.47167z"/>
-<path transform="translate(73 6.0392) scale(-1 1) translate(-73 -6.0392)" d="m61.63 11.159c3.9149-5.5087 14.648-8.5977 23.893-6.3274 1.0727 0.26343 2.1558-0.39262 2.4193-1.4653 0.26342-1.0727-0.39262-2.1558-1.4653-2.4193-10.737-2.6366-23.165 0.9404-28.107 7.8948-0.63986 0.90036-0.42869 2.149 0.47167 2.7888 0.90036 0.63986 2.149 0.42869 2.7888-0.47167z"/>
-</g>
-</g>
-</g>
-<g fill-rule="evenodd">
-<defs>
-<rect id="h" width="264" height="280"/>
-<path id="a" d="m38 79.36v31.64c0 22.339 13.08 41.623 32 50.611v13.135c-19.637 2.6886-35.359 7.4179-46.615 6.2547-14.223-1.4697-21.888-30.205-22.385-55-0.61712-30.836 28.319-95.205 39-108 7.9231-9.4912 29.695-17.449 54-17 24.305 0.44936 46.862 5.8122 55 16 12.324 15.428 37.869 74.079 38 109 0.093345 24.8-9.5376 49.66-23 51-11.08 1.1029-26.525-1.4887-46-3.0027v-12.386c18.92-8.9877 32-28.272 32-50.611v-28.012c-9.5213-4.8577-18.137-10.74-25.846-17.647 3.2086 5.2958 6.6951 9.8065 10.459 13.532-27.017-7.5803-48.508-20.423-64.472-38.528-7.981 16.465-18.695 29.469-32.141 39.015z"/>
-</defs>
-<mask id="j" fill="white">
-<use xlink:href="#h"/>
-</mask>
-<g mask="url(#j)">
-<g transform="translate(-1)">
-<g transform="translate(39 19)" fill-rule="evenodd">
-<mask id="i" fill="white">
-<use xlink:href="#a"/>
-</mask>
-<use fill="#E6E6E6" xlink:href="#a"/>
-<g fill="#000" mask="url(#i)">
-<g transform="translate(0)">
-<rect width="264" height="280"/>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
+<svg style="height:200px;width:200px" version="1.1" viewBox="0 0 264 280" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Created with getavataaars.com</desc>
+    <defs>
+        <path id="b"
+            d="m124 144.61v18.389h4c39.765 0 72 32.235 72 72v9h-200v-9c-4.8697e-15 -39.765 32.235-72 72-72h4v-18.389c-17.237-8.1886-29.628-24.924-31.695-44.73-5.8248-0.82345-10.305-5.8291-10.305-11.881v-14c0-5.946 4.3246-10.882 10-11.834v-6.1659c0-30.928 25.072-56 56-56s56 25.072 56 56v6.1659c5.6754 0.95216 10 5.8881 10 11.834v14c0 6.0521-4.4803 11.058-10.305 11.881-2.0671 19.806-14.457 36.541-31.695 44.73z" />
+    </defs>
+    <g id="l" fill="none" fill-rule="evenodd">
+        <g transform="translate(-825 -1100)">
+            <g transform="translate(825 1100)">
+                <g fill-rule="evenodd" mask="url(#react-mask-5)">
+                    <g transform="translate(32 36)">
+                        <mask id="e" fill="white">
+                            <use xlink:href="#b" />
+                        </mask>
+                        <use fill="#D0C6AC" xlink:href="#b" />
+                        <g id="n" fill="#FD9841" mask="url(#e)">
+                            <g id="m" transform="translate(0)">
+                                <rect width="264" height="280" />
+                            </g>
+                        </g>
+                        <path
+                            d="m156 79v23c0 30.928-25.072 56-56 56s-56-25.072-56-56v-23 15c0 30.928 25.072 56 56 56s56-25.072 56-56v-15z"
+                            fill="#000" fill-opacity=".1" mask="url(#e)" />
+                    </g>
+                    <g transform="translate(0 170)">
+                        <defs>
+                            <path id="d"
+                                d="m165.96 29.295c36.976 3.0301 66.04 33.999 66.04 71.757v8.9483h-200v-8.9483c0-38.099 29.592-69.287 67.045-71.832-0.030146 0.37359-0.045406 0.7497-0.045406 1.1281 0 11.863 14.998 21.48 33.5 21.48s33.5-9.6169 33.5-21.48c0-0.35296-0.013277-0.70392-0.039528-1.0527z" />
+                        </defs>
+                        <mask id="g" fill="white">
+                            <use xlink:href="#d" />
+                        </mask>
+                        <use fill="#E6E6E6" fill-rule="evenodd" xlink:href="#d" />
+                        <g fill="#B1E2FF" fill-rule="evenodd" mask="url(#g)">
+                            <rect width="264" height="110" />
+                        </g>
+                        <g fill="#000" fill-opacity=".16" fill-rule="evenodd" mask="url(#g)" opacity=".6">
+                            <g transform="translate(92 4)">
+                                <ellipse cx="40.5" cy="27.848" rx="39.635" ry="26.914" />
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="translate(76 82)" fill="#000">
+                        <g transform="translate(2 52)">
+                            <defs>
+                                <path id="c"
+                                    d="m35.118 15.128c1.0579 9.4917 9.1081 16.872 18.882 16.872 9.8042 0 17.874-7.4259 18.892-16.96 0.081909-0.76731-0.77502-2.0401-1.849-2.0401h-33.956c-1.0802 0-2.0748 1.1784-1.969 2.1281z" />
+                            </defs>
+                            <mask id="f" fill="white">
+                                <use xlink:href="#c" />
+                            </mask>
+                            <use fill="#000000" fill-opacity=".7" fill-rule="evenodd" xlink:href="#c" />
+                            <rect x="39" y="2" width="31" height="16" rx="5" fill="#fff" fill-rule="evenodd"
+                                mask="url(#f)" />
+                            <g fill="#FF4F6D" fill-rule="evenodd" mask="url(#f)">
+                                <g transform="translate(38 24)">
+                                    <circle cx="11" cy="11" r="11" />
+                                    <circle cx="21" cy="11" r="11" />
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="translate(28 40)" fill-opacity=".16">
+                            <path d="m16 8c0 4.4183 5.3726 8 12 8s12-3.5817 12-8" />
+                        </g>
+                        <g transform="translate(0 8)">
+                            <circle cx="30" cy="22" r="14" fill="#fff" />
+                            <circle cx="82" cy="22" r="14" fill="#fff" />
+                            <circle id="o" cx="30" cy="22" r="6" fill="#000" fill-opacity=".7" />
+                            <circle cx="82" cy="22" r="6" fill="#000" fill-opacity=".7" />
+                        </g>
+                        <g fill-opacity=".6">
+                            <g transform="translate(12 6)" fill-rule="nonzero">
+                                <path id="k"
+                                    d="m3.6302 11.159c3.9149-5.5087 14.648-8.5977 23.893-6.3274 1.0727 0.26343 2.1558-0.39262 2.4193-1.4653 0.26342-1.0727-0.39262-2.1558-1.4653-2.4193-10.737-2.6366-23.165 0.9404-28.107 7.8948-0.63986 0.90036-0.42869 2.149 0.47167 2.7888 0.90036 0.63986 2.149 0.42869 2.7888-0.47167z" />
+                                <path transform="translate(73 6.0392) scale(-1 1) translate(-73 -6.0392)"
+                                    d="m61.63 11.159c3.9149-5.5087 14.648-8.5977 23.893-6.3274 1.0727 0.26343 2.1558-0.39262 2.4193-1.4653 0.26342-1.0727-0.39262-2.1558-1.4653-2.4193-10.737-2.6366-23.165 0.9404-28.107 7.8948-0.63986 0.90036-0.42869 2.149 0.47167 2.7888 0.90036 0.63986 2.149 0.42869 2.7888-0.47167z" />
+                            </g>
+                        </g>
+                    </g>
+                    <g fill-rule="evenodd">
+                        <defs>
+                            <rect id="h" width="264" height="280" />
+                            <path id="a"
+                                d="m38 79.36v31.64c0 22.339 13.08 41.623 32 50.611v13.135c-19.637 2.6886-35.359 7.4179-46.615 6.2547-14.223-1.4697-21.888-30.205-22.385-55-0.61712-30.836 28.319-95.205 39-108 7.9231-9.4912 29.695-17.449 54-17 24.305 0.44936 46.862 5.8122 55 16 12.324 15.428 37.869 74.079 38 109 0.093345 24.8-9.5376 49.66-23 51-11.08 1.1029-26.525-1.4887-46-3.0027v-12.386c18.92-8.9877 32-28.272 32-50.611v-28.012c-9.5213-4.8577-18.137-10.74-25.846-17.647 3.2086 5.2958 6.6951 9.8065 10.459 13.532-27.017-7.5803-48.508-20.423-64.472-38.528-7.981 16.465-18.695 29.469-32.141 39.015z" />
+                        </defs>
+                        <mask id="j" fill="white">
+                            <use xlink:href="#h" />
+                        </mask>
+                        <g mask="url(#j)">
+                            <g transform="translate(-1)">
+                                <g transform="translate(39 19)" fill-rule="evenodd">
+                                    <mask id="i" fill="white">
+                                        <use xlink:href="#a" />
+                                    </mask>
+                                    <use fill="#E6E6E6" xlink:href="#a" />
+                                    <g fill="#000" mask="url(#i)">
+                                        <g transform="translate(0)">
+                                            <rect width="264" height="280" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

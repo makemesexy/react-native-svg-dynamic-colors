@@ -7,11 +7,11 @@ import {
   TouchableOpacity
 } from 'react-native';
 import BallIcon from './src/ball.svg';
-import AvatarIcon from './src/girl.svg';
+import AvatarIcon from './src/boy1.svg';
 import MessageIcon from './src/heart.svg';
 
 const { width } = Dimensions.get('window');
-const iconSize = width * 0.3;
+const iconSize = width * 0.8;
 
 const ColorBtn = ({
   color,
