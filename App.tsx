@@ -4,106 +4,156 @@ import {
   Dimensions,
   View,
   Text,
+  TouchableOpacity
 } from 'react-native';
+import BallIcon from './src/ball.svg';
 import AvatarIcon from './src/avatar.svg';
-import Slider from '@react-native-community/slider';
+import MessageIcon from './src/heart.svg';
 
 const { width } = Dimensions.get('window');
 const iconSize = width * 0.3;
 
-const hslToRgb = (h, s, l) => {
-  const c = (1 - Math.abs(2 * l - 1)) * s;
-  const x = c * (1 - Math.abs((h / 60) % 2 - 1));
-  const m = l - c / 2;
-  let r, g, b;
+const ColorBtn = ({
+  color,
+  onPress,
+  selectedColor
+}: {
+  color: string;
+  selectedColor: string;
+  onPress: (color: string) => void;
+}) => {
+  const isSelected = color === selectedColor;
+  return (
+    <View style={[styles.btnCover, isSelected ? styles.selected : null]}>
+      <TouchableOpacity
+        style={[styles.colorBtn, { backgroundColor: color }]}
+        onPress={() => onPress(color)}
+      />
+    </View>
+  );
+};
 
-  if (h < 60) {
-    r = c;
-    g = x;
-    b = 0;
-  } else if (h < 120) {
-    r = x;
-    g = c;
-    b = 0;
-  } else if (h < 180) {
-    r = 0;
-    g = c;
-    b = x;
-  } else if (h < 240) {
-    r = 0;
-    g = x;
-    b = c;
-  } else if (h < 300) {
-    r = x;
-    g = 0;
-    b = c;
-  } else {
-    r = c;
-    g = 0;
-    b = x;
-  }
+const colors = [
+  'rgb(0, 0, 0)', // black
+  'rgb(255, 159, 64)', // orange
+  'brown',
+  'rgb(255, 99, 132)', // pink
+  'rgb(54, 162, 235)', // blue
+  'rgb(0, 100, 192)', // green
+  'rgb(255, 206, 86)', // yellow
+  'rgb(153, 102, 255)' // purple
+];
 
-  return `rgb(${Math.round((r + m) * 255)}, ${Math.round((g + m) * 255)}, ${Math.round((b + m) * 255)})`;
+const generateRandomColor = () => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
 };
 
 export default function App() {
-  const [hue, setHue] = useState(0);
-  const [saturation, setSaturation] = useState(1);
-  const [lightness, setLightness] = useState(0.5);
-
-  const primaryColor = hslToRgb(hue, saturation, lightness);
-  const [secondaryColor, setSecondaryColor] = useState('rgb(255, 159, 64)');
-  const [tertiaryColor, setTertiaryColor] = useState('brown');
+  const [primaryColor, setPrimaryColor] = useState(colors[0]);
+  const [secondaryColor, setSecondaryColor] = useState(colors[1]);
+  const [tertiaryColor, setTertiaryColor] = useState(colors[2]);
 
   return (
     <View style={styles.container}>
+      {/* <View style={styles.icon}>
+        <BallIcon
+          width={iconSize}
+          height={iconSize}
+          fill={primaryColor} />
+      </View> */}
+
       <View style={styles.icon}>
         <AvatarIcon
           width={iconSize}
           height={iconSize}
           fill={primaryColor}
           fillSecondary={secondaryColor}
-          fillTertiary={tertiaryColor}
+          fillTertiary={tertiaryColor} // Added tertiary color here
         />
       </View>
 
-      <View style={styles.sliderContainer}>
-        <Text style={styles.sliderLabel}>Hue: {hue.toFixed(0)}°</Text>
-        <Slider
-          style={styles.slider}
-          minimumValue={0}
-          maximumValue={360}
-          value={hue}
-          onValueChange={setHue}
-          minimumTrackTintColor={primaryColor}
-          maximumTrackTintColor="#000000"
+      {/* <View style={styles.icon}>
+        <MessageIcon
+          width={iconSize}
+          height={iconSize}
+          fill={primaryColor}
+          fillSecondary={secondaryColor}
         />
+      </View> */}
+
+      <View style={styles.footer}>
+        <Text>
+          Primary color: <Text style={styles.bold}>{primaryColor}</Text>
+        </Text>
+        <View style={styles.btnRow}>
+          {colors.map((color, index) => {
+            return (
+              <ColorBtn
+                key={index}
+                color={color}
+                selectedColor={primaryColor}
+                onPress={setPrimaryColor}
+              />
+            );
+          })}
+          <TouchableOpacity
+            style={styles.randomBtn}
+            onPress={() => setPrimaryColor(generateRandomColor())}
+          >
+            <Text>random</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
-      <View style={styles.sliderContainer}>
-        <Text style={styles.sliderLabel}>Saturation: {(saturation * 100).toFixed(0)}%</Text>
-        <Slider
-          style={styles.slider}
-          minimumValue={0}
-          maximumValue={1}
-          value={saturation}
-          onValueChange={setSaturation}
-          minimumTrackTintColor={primaryColor}
-          maximumTrackTintColor="#000000"
-        />
+      <View style={styles.footer}>
+        <Text>
+          Secondary color: <Text style={styles.bold}>{secondaryColor}</Text>
+        </Text>
+        <View style={styles.btnRow}>
+          {colors.map((color, index) => {
+            return (
+              <ColorBtn
+                key={index}
+                color={color}
+                selectedColor={secondaryColor}
+                onPress={setSecondaryColor}
+              />
+            );
+          })}
+          <TouchableOpacity
+            style={styles.randomBtn}
+            onPress={() => setSecondaryColor(generateRandomColor())}
+          >
+            <Text>random</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
-      <View style={styles.sliderContainer}>
-        <Text style={styles.sliderLabel}>Lightness: {(lightness * 100).toFixed(0)}%</Text>
-        <Slider
-          style={styles.slider}
-          minimumValue={0}
-          maximumValue={1}
-          value={lightness}
-          onValueChange={setLightness}
-          minimumTrackTintColor={primaryColor}
-          maximumTrackTintColor="#000000"
-        />
+      <View style={styles.footer}>
+        <Text>
+          Tertiary color: <Text style={styles.bold}>{tertiaryColor}</Text>
+        </Text>
+        <View style={styles.btnRow}>
+          {colors.map((color, index) => {
+            return (
+              <ColorBtn
+                key={index}
+                color={color}
+                selectedColor={tertiaryColor}
+                onPress={setTertiaryColor}
+              />
+            );
+          })}
+          <TouchableOpacity
+            style={styles.randomBtn}
+            onPress={() => setTertiaryColor(generateRandomColor())}
+          >
+            <Text>random</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -112,7 +162,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
+    backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20
@@ -120,19 +170,41 @@ const styles = StyleSheet.create({
   icon: {
     paddingTop: 20
   },
-  sliderContainer: {
+  footer: {
+    marginTop: 20,
     width: '100%',
-    paddingHorizontal: 20,
-    marginVertical: 10
+    alignItems: 'flex-start'
   },
-  sliderLabel: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 5,
-    color: '#fff'
+  btnRow: {
+    paddingTop: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    width: '100%'
   },
-  slider: {
+  colorBtn: {
     width: '100%',
-    height: 40
+    height: '100%',
+    borderRadius: 15
+  },
+  btnCover: {
+    padding: 2,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    marginRight: 2
+  },
+  selected: {
+    borderWidth: 2,
+    borderRadius: 15
+  },
+  bold: {
+    fontWeight: 'bold'
+  },
+  randomBtn: {
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 3
   }
 });
