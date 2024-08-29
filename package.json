@@ -5,27 +5,32 @@
   "homepage": "https://medium.com/@HassanYousefi/how-to-use-svg-with-dynamic-colors-in-react-native-171a94e8a8e2",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
     "eject": "expo eject"
   },
   "dependencies": {
-    "@expo/webpack-config": "^0.16.26",
-    "@svgr/webpack": "5.5.0",
-    "expo": "~45.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-native": "0.68.2",
-    "react-native-svg": "12.3.0",
-    "react-native-svg-transformer": "^1.0.0",
-    "react-native-web": "0.17.7"
+    "@expo/metro-config": "^0.18.11",
+    "@react-native-community/slider": "^4.5.2",
+    "@react-native/assets-registry": "^0.75.2",
+    "@svgr/webpack": "8.1.0",
+    "@types/react": "^18.3.4",
+    "expo": "~51.0.31",
+    "metro-config": "^0.80.10",
+    "metro-resolver": "^0.80.10",
+    "metro-source-map": "^0.80.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-svg": "15.2.0",
+    "react-native-svg-transformer": "^1.5.0",
+    "react-native-web": "0.19.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@types/react": "~17.0.47",
-    "@types/react-native": "~0.68.2",
-    "typescript": "~4.3.5"
+    "@babel/core": "^7.25.2",
+    "metro": "^0.80.10",
+    "typescript": "~5.3.3"
   },
   "private": true
 }

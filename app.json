@@ -8,18 +8,6 @@
       "android",
       "web"
     ],
-    "packagerOpts": {
-      "config": "metro.config.js",
-      "sourceExts": [
-        "ts",
-        "tsx",
-        "js",
-        "jsx",
-        "json",
-        "wasm",
-        "svg"
-      ]
-    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -35,7 +23,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.thetushargoyal.react-native-svg-dynamic-colors"
     },
     "android": {
       "adaptiveIcon": {

@@ -1,0 +1,92 @@
+<svg width="264" height="280" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="width:200px;height:200px">
+    <defs>
+        <path
+            d="M124 144.611V163h4c39.765 0 72 32.235 72 72v9H0v-9c0-39.765 32.235-72 72-72h4v-18.389c-17.237-8.189-29.628-24.924-31.695-44.73C38.48 99.058 34 94.052 34 88V74c0-5.946 4.325-10.882 10-11.834V56c0-30.928 25.072-56 56-56s56 25.072 56 56v6.166c5.675.952 10 5.888 10 11.834v14c0 6.052-4.48 11.058-10.305 11.881-2.067 19.806-14.458 36.541-31.695 44.73z"
+            id="prefix__a" />
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g mask="url(#prefix__react-mask-5)">
+            <g transform="translate(32 36)">
+                <mask id="prefix__b" fill="#fff">
+                    <use xlink:href="#prefix__a" />
+                </mask>
+                <use fill="#D0C6AC" xlink:href="#prefix__a" />
+                <g mask="url(#prefix__b)" fill="#FD9841">
+                    <path d="M0 0h264v280H0z" />
+                </g>
+                <path
+                    d="M156 79v23c0 30.928-25.072 56-56 56s-56-25.072-56-56V79v15c0 30.928 25.072 56 56 56s56-25.072 56-56V79z"
+                    fill-opacity=".1" fill="#000" mask="url(#prefix__b)" />
+            </g>
+            <g transform="translate(0 170)">
+                <defs>
+                    <path
+                        d="M165.96 29.295c36.976 3.03 66.04 34 66.04 71.757V110H32v-8.948c0-38.1 29.592-69.287 67.045-71.832-.03.373-.045.75-.045 1.128 0 11.863 14.998 21.48 33.5 21.48 18.502 0 33.5-9.617 33.5-21.48 0-.353-.013-.704-.04-1.053z"
+                        id="prefix__c" />
+                </defs>
+                <mask id="prefix__d" fill="#fff">
+                    <use xlink:href="#prefix__c" />
+                </mask>
+                <use fill="#E6E6E6" xlink:href="#prefix__c" />
+                <g mask="url(#prefix__d)" fill="#B1E2FF">
+                    <path d="M0 0h264v110H0z" />
+                </g>
+                <g opacity=".6" mask="url(#prefix__d)" fill-opacity=".16" fill="#000">
+                    <ellipse cx="40.5" cy="27.848" rx="39.635" ry="26.914" transform="translate(92 4)" />
+                </g>
+            </g>
+            <g fill="#000">
+                <g transform="translate(78 134)">
+                    <defs>
+                        <path
+                            d="M35.118 15.128C36.176 24.62 44.226 32 54 32c9.804 0 17.874-7.426 18.892-16.96.082-.767-.775-2.04-1.85-2.04H37.088c-1.08 0-2.075 1.178-1.97 2.128z"
+                            id="prefix__e" />
+                    </defs>
+                    <mask id="prefix__f" fill="#fff">
+                        <use xlink:href="#prefix__e" />
+                    </mask>
+                    <use fill-opacity=".7" xlink:href="#prefix__e" />
+                    <rect fill="#FFF" mask="url(#prefix__f)" x="39" y="2" width="31" height="16" rx="5" />
+                    <g mask="url(#prefix__f)" fill="#FF4F6D">
+                        <g transform="translate(38 24)">
+                            <circle cx="11" cy="11" r="11" />
+                            <circle cx="21" cy="11" r="11" />
+                        </g>
+                    </g>
+                </g>
+                <path d="M120 130c0 4.418 5.373 8 12 8s12-3.582 12-8" fill-opacity=".16" />
+                <g transform="translate(76 90)">
+                    <circle fill="#FFF" cx="30" cy="22" r="14" />
+                    <circle fill="#FFF" cx="82" cy="22" r="14" />
+                    <circle fill-opacity=".7" cx="30" cy="22" r="6" />
+                    <circle fill-opacity=".7" cx="82" cy="22" r="6" />
+                </g>
+                <g fill-rule="nonzero" fill-opacity=".6">
+                    <path
+                        d="M91.63 99.159c3.915-5.51 14.648-8.598 23.893-6.328a2 2 0 00.954-3.884c-10.737-2.637-23.165.94-28.107 7.894a2 2 0 003.26 2.318zM172.37 99.159c-3.915-5.51-14.648-8.598-23.893-6.328a2 2 0 01-.954-3.884c10.737-2.637 23.165.94 28.108 7.894a2 2 0 01-3.26 2.318z" />
+                </g>
+            </g>
+            <defs>
+                <path id="prefix__g" d="M0 0h264v280H0z" />
+                <path
+                    d="M183.68 38.949c5.406-4.95 6.707-14.987 3.638-21.5-3.769-7.995-11.417-8.997-18.746-5.48-6.908 3.315-13.057 4.419-20.622 2.813-7.258-1.541-14.144-4.26-21.647-4.706-12.325-.733-24.3 3.839-32.7 13.053-1.603 1.758-2.894 3.768-4.115 5.805-.976 1.63-2.077 3.38-2.493 5.258-.198.894.17 3.098-.275 3.83-.48.79-2.296 1.515-3.069 2.102-1.567 1.189-2.924 2.53-4.18 4.047-2.666 3.222-4.133 6.587-5.368 10.572-4.102 13.245-4.45 28.998.854 42.004.707 1.734 2.898 5.352 4.186 1.638.255-.734-.334-3.194-.333-3.935.005-2.72 1.506-20.729 8.047-30.817 2.13-3.284 11.973-15.58 13.984-15.68 1.065 1.693 11.88 12.51 39.942 11.242 12.662-.572 22.4-6.26 24.738-8.727 1.028 5.533 12.992 13.816 14.815 17.224 5.267 9.846 6.435 30.304 8.445 30.265 2.01-.038 3.453-5.237 3.867-6.23 3.072-7.375 3.595-16.632 3.267-24.559-.427-10.202-4.638-21.226-12.235-28.22z"
+                    id="prefix__i" />
+            </defs>
+            <mask id="prefix__h" fill="#fff">
+                <use xlink:href="#prefix__g" />
+            </mask>
+            <g mask="url(#prefix__h)">
+                <g transform="translate(-1)">
+                    <mask id="prefix__j" fill="#fff">
+                        <use xlink:href="#prefix__i" />
+                    </mask>
+                    <use fill="#28354B" xlink:href="#prefix__i" />
+                    <g mask="url(#prefix__j)" fill="#000">
+                        <path d="M0 0h264v280H0z" />
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

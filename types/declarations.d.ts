@@ -4,6 +4,7 @@ declare module '*.svg' {
   const content: React.FC<
     SvgProps & {
       fillSecondary?: string;
+      fillTertiary?: string;
     }
   >;
   export default content;
