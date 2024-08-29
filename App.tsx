@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   StyleSheet,
   Dimensions,
@@ -6,22 +6,12 @@ import {
   Text,
   TouchableOpacity
 } from 'react-native';
-import BallIcon from './src/ball.svg';
 import AvatarIcon from './src/boy1.svg';
-import MessageIcon from './src/heart.svg';
 
 const { width } = Dimensions.get('window');
 const iconSize = width * 0.8;
 
-const ColorBtn = ({
-  color,
-  onPress,
-  selectedColor
-}: {
-  color: string;
-  selectedColor: string;
-  onPress: (color: string) => void;
-}) => {
+const ColorBtn = ({ color, onPress, selectedColor }) => {
   const isSelected = color === selectedColor;
   return (
     <View style={[styles.btnCover, isSelected ? styles.selected : null]}>
@@ -33,128 +23,105 @@ const ColorBtn = ({
   );
 };
 
-const colors = [
-  'rgb(0, 0, 0)', // black
-  'rgb(255, 159, 64)', // orange
-  'brown',
-  'rgb(255, 99, 132)', // pink
-  'rgb(54, 162, 235)', // blue
-  'rgb(0, 100, 192)', // green
-  'rgb(255, 206, 86)', // yellow
-  'rgb(153, 102, 255)' // purple
-];
+const generateNearbyColors = (baseColor, type, count = 5) => {
+  const [r, g, b] = baseColor.match(/\d+/g).map(Number);
+  const colors = [baseColor];
+  
+  const variation = {
+    hair: 20,  // Smaller variation for hair, to stay within natural hair colors
+    skin: 10,  // Even smaller variation for skin tones
+    eye: 15   // Slightly more variation for eyes
+  }[type] || 15;
 
-const generateRandomColor = () => {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  return `rgb(${r}, ${g}, ${b})`;
+  for (let i = 1; i < count; i++) {
+    const newR = Math.max(0, Math.min(255, r + Math.floor(Math.random() * variation * 2 - variation)));
+    const newG = Math.max(0, Math.min(255, g + Math.floor(Math.random() * variation * 2 - variation)));
+    const newB = Math.max(0, Math.min(255, b + Math.floor(Math.random() * variation * 2 - variation)));
+    
+    // Ensure colors stay within a natural range based on the type
+    if (type === 'hair') {
+      colors.push(`rgb(${Math.min(newR, 150)}, ${Math.min(newG, 150)}, ${Math.min(newB, 150)})`);
+    } else if (type === 'skin') {
+      colors.push(`rgb(${Math.max(newR, 200)}, ${Math.max(newG, 160)}, ${Math.max(newB, 120)})`);
+    } else {
+      colors.push(`rgb(${newR}, ${newG}, ${newB})`);
+    }
+  }
+
+  return colors;
 };
 
 export default function App() {
-  const [primaryColor, setPrimaryColor] = useState(colors[0]);
-  const [secondaryColor, setSecondaryColor] = useState(colors[1]);
-  const [tertiaryColor, setTertiaryColor] = useState(colors[2]);
+  const [predictedColors, setPredictedColors] = useState({
+    hair: 'rgb(0, 0, 0)',
+    skin: 'rgb(255, 206, 86)',
+    eye: 'rgb(54, 162, 235)'
+  });
+  
+  const [colorPalettes, setColorPalettes] = useState({
+    hair: [],
+    skin: [],
+    eye: []
+  });
+  
+  const [selectedColors, setSelectedColors] = useState({
+    hair: '',
+    skin: '',
+    eye: ''
+  });
+
+  useEffect(() => {
+    const fetchPredictedColors = async () => {
+      const response = {
+        hair: 'rgb(50, 50, 50)',
+        skin: 'rgb(230, 190, 130)',
+        eye: 'rgb(0, 0, 0)'
+      };
+      setPredictedColors(response);
+  
+      const palettes = {
+        hair: generateNearbyColors(response.hair, 'hair'),
+        skin: generateNearbyColors(response.skin, 'skin'),
+        eye: generateNearbyColors(response.eye, 'eye')
+      };
+      setColorPalettes(palettes);
+      setSelectedColors(response);
+    };
+  
+    fetchPredictedColors();
+  }, []);
+
+  const handleColorSelect = (type, color) => {
+    setSelectedColors(prev => ({ ...prev, [type]: color }));
+  };
 
   return (
     <View style={styles.container}>
-      {/* <View style={styles.icon}>
-        <BallIcon
-          width={iconSize}
-          height={iconSize}
-          fill={primaryColor} />
-      </View> */}
-
       <View style={styles.icon}>
         <AvatarIcon
           width={iconSize}
           height={iconSize}
-          fill={primaryColor}
-          fillSecondary={secondaryColor}
-          fillTertiary={tertiaryColor} // Added tertiary color here
+          fill={selectedColors.hair}
+          fillSecondary={selectedColors.skin}
+          fillTertiary={selectedColors.eye}
         />
       </View>
 
-      {/* <View style={styles.icon}>
-        <MessageIcon
-          width={iconSize}
-          height={iconSize}
-          fill={primaryColor}
-          fillSecondary={secondaryColor}
-        />
-      </View> */}
-
-      <View style={styles.footer}>
-        <Text>
-          Primary color: <Text style={styles.bold}>{primaryColor}</Text>
-        </Text>
-        <View style={styles.btnRow}>
-          {colors.map((color, index) => {
-            return (
+      {['hair', 'skin', 'eye'].map((type) => (
+        <View key={type} style={styles.footer}>
+          <Text style={styles.label}>{type.charAt(0).toUpperCase() + type.slice(1)} Color</Text>
+          <View style={styles.btnRow}>
+            {colorPalettes[type].map((color, index) => (
               <ColorBtn
                 key={index}
                 color={color}
-                selectedColor={primaryColor}
-                onPress={setPrimaryColor}
+                selectedColor={selectedColors[type]}
+                onPress={(color) => handleColorSelect(type, color)}
               />
-            );
-          })}
-          <TouchableOpacity
-            style={styles.randomBtn}
-            onPress={() => setPrimaryColor(generateRandomColor())}
-          >
-            <Text>random</Text>
-          </TouchableOpacity>
+            ))}
+          </View>
         </View>
-      </View>
-
-      <View style={styles.footer}>
-        <Text>
-          Secondary color: <Text style={styles.bold}>{secondaryColor}</Text>
-        </Text>
-        <View style={styles.btnRow}>
-          {colors.map((color, index) => {
-            return (
-              <ColorBtn
-                key={index}
-                color={color}
-                selectedColor={secondaryColor}
-                onPress={setSecondaryColor}
-              />
-            );
-          })}
-          <TouchableOpacity
-            style={styles.randomBtn}
-            onPress={() => setSecondaryColor(generateRandomColor())}
-          >
-            <Text>random</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      <View style={styles.footer}>
-        <Text>
-          Tertiary color: <Text style={styles.bold}>{tertiaryColor}</Text>
-        </Text>
-        <View style={styles.btnRow}>
-          {colors.map((color, index) => {
-            return (
-              <ColorBtn
-                key={index}
-                color={color}
-                selectedColor={tertiaryColor}
-                onPress={setTertiaryColor}
-              />
-            );
-          })}
-          <TouchableOpacity
-            style={styles.randomBtn}
-            onPress={() => setTertiaryColor(generateRandomColor())}
-          >
-            <Text>random</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      ))}
     </View>
   );
 }
@@ -162,49 +129,41 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20
   },
   icon: {
-    paddingTop: 20
+    marginBottom: 20
   },
   footer: {
     marginTop: 20,
     width: '100%',
     alignItems: 'flex-start'
   },
+  label: {
+    color: '#fff',
+    marginBottom: 5
+  },
   btnRow: {
-    paddingTop: 5,
     flexDirection: 'row',
     alignItems: 'center',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     width: '100%'
   },
   colorBtn: {
     width: '100%',
     height: '100%',
-    borderRadius: 15
   },
   btnCover: {
-    padding: 2,
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    marginRight: 2
+    width: 40,
+    height: 40,
+    margin: 5
   },
   selected: {
     borderWidth: 2,
-    borderRadius: 15
-  },
-  bold: {
-    fontWeight: 'bold'
-  },
-  randomBtn: {
-    borderWidth: 1,
-    borderRadius: 5,
-    padding: 3
+    borderColor: '#fff'
   }
 });
